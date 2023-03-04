@@ -12,6 +12,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let req = CreateJobReQ(name: "morpheus", job: "leader")
+        let url = URL(string: "https://reqres.in/api/users")!
+        
+//        APIClient().post(url: url, request: req, responseType: CreateJobRes.self) { result in
+//            switch result {
+//            case .success(let success):
+//                print("Got Data \(success)")
+//            case .failure(let failure):
+//                print("API Failed \(failure.localizedDescription)")
+//            }
+//        }
+        
     }
 
 

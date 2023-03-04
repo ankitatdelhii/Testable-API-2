@@ -16,6 +16,8 @@
 		9D69498429B3346A0021369F /* Testable_API2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D69498329B3346A0021369F /* Testable_API2Tests.swift */; };
 		9D69498E29B3346A0021369F /* Testable_API2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D69498D29B3346A0021369F /* Testable_API2UITests.swift */; };
 		9D69499029B3346A0021369F /* Testable_API2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D69498F29B3346A0021369F /* Testable_API2UITestsLaunchTests.swift */; };
+		9D69499D29B3349B0021369F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D69499C29B3349B0021369F /* APIClient.swift */; };
+		9D6949A129B339E30021369F /* CreateJobReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6949A029B339E30021369F /* CreateJobReq.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		9D69498929B3346A0021369F /* Testable API2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Testable API2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D69498D29B3346A0021369F /* Testable_API2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testable_API2UITests.swift; sourceTree = "<group>"; };
 		9D69498F29B3346A0021369F /* Testable_API2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testable_API2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9D69499C29B3349B0021369F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		9D6949A029B339E30021369F /* CreateJobReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJobReq.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		9D69496B29B334690021369F /* Testable API2 */ = {
 			isa = PBXGroup;
 			children = (
+				9D69499F29B339B20021369F /* Model */,
+				9D69499E29B334A00021369F /* API */,
 				9D69496C29B334690021369F /* AppDelegate.swift */,
 				9D69496E29B334690021369F /* SceneDelegate.swift */,
 				9D69497029B334690021369F /* ViewController.swift */,
@@ -125,6 +131,22 @@
 				9D69498F29B3346A0021369F /* Testable_API2UITestsLaunchTests.swift */,
 			);
 			path = "Testable API2UITests";
+			sourceTree = "<group>";
+		};
+		9D69499E29B334A00021369F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9D69499C29B3349B0021369F /* APIClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		9D69499F29B339B20021369F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D6949A029B339E30021369F /* CreateJobReq.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +283,8 @@
 				9D69497129B334690021369F /* ViewController.swift in Sources */,
 				9D69496D29B334690021369F /* AppDelegate.swift in Sources */,
 				9D69496F29B334690021369F /* SceneDelegate.swift in Sources */,
+				9D69499D29B3349B0021369F /* APIClient.swift in Sources */,
+				9D6949A129B339E30021369F /* CreateJobReq.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

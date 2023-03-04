@@ -43,32 +43,16 @@ class APIClient {
                 return
             }
             
-            guard let hasResponse = urlRes as? HTTPURLResponse else {
-                completion(.failure(APIClientError.noResponse))
+            guard let hasData = data else {
+                completion(.failure(APIClientError.noData))
                 return
             }
             
-            switch hasResponse.statusCode {
-                
-            case 200...299:
-                print("Got Res")
-                
-                guard let hasData = data else {
-                    completion(.failure(APIClientError.noData))
-                    return
-                }
-                
-                do {
-                    let decodedRes = try JSONDecoder().decode(RES.self, from: hasData)
-                    completion(.success(decodedRes))
-                } catch {
-                    
-                }
-                
-                
-            default:
-                print("Invalid Response")
-                completion(.failure(APIClientError.invalidStatusCode(hasResponse.statusCode)))
+            do {
+                let decodedRes = try JSONDecoder().decode(RES.self, from: hasData)
+                completion(.success(decodedRes))
+            } catch {
+                completion(.failure(error))
             }
             
         }

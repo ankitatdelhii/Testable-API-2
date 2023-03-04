@@ -18,6 +18,7 @@
 		9D69499029B3346A0021369F /* Testable_API2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D69498F29B3346A0021369F /* Testable_API2UITestsLaunchTests.swift */; };
 		9D69499D29B3349B0021369F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D69499C29B3349B0021369F /* APIClient.swift */; };
 		9D6949A129B339E30021369F /* CreateJobReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6949A029B339E30021369F /* CreateJobReq.swift */; };
+		9D7973CA29B3C80E003BB1CA /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7973C929B3C80E003BB1CA /* MockURLProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9D69498F29B3346A0021369F /* Testable_API2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testable_API2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9D69499C29B3349B0021369F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		9D6949A029B339E30021369F /* CreateJobReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJobReq.swift; sourceTree = "<group>"; };
+		9D7973C929B3C80E003BB1CA /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		9D69498229B3346A0021369F /* Testable API2Tests */ = {
 			isa = PBXGroup;
 			children = (
+				9D7973C829B3C801003BB1CA /* API */,
 				9D69498329B3346A0021369F /* Testable_API2Tests.swift */,
 			);
 			path = "Testable API2Tests";
@@ -147,6 +150,14 @@
 				9D6949A029B339E30021369F /* CreateJobReq.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9D7973C829B3C801003BB1CA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9D7973C929B3C80E003BB1CA /* MockURLProtocol.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D69498429B3346A0021369F /* Testable_API2Tests.swift in Sources */,
+				9D7973CA29B3C80E003BB1CA /* MockURLProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

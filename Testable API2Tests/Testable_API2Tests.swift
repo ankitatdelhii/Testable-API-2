@@ -10,27 +10,50 @@ import XCTest
 
 final class Testable_API2Tests: XCTestCase {
 
-    override func setUpWithError() throws {
+    override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
-    override func tearDownWithError() throws {
+    override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    func testPOSTAPI() {
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+        //Given
+        let config = URLSessionConfiguration.ephemeral
+        config.protocolClasses = [MockURLProtocol.self]
+        let urlSession = URLSession(configuration: config)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        let res = CreateJobRes(name: "AbCD", job: "iOS", id: "1", createdAt: "Now")
+        let resData = try! JSONEncoder().encode(res)
+        MockURLProtocol.stubResponseData = resData
+
+        let apiClient = APIClient(session: urlSession)
+
+
+
+        let req = CreateJobReQ(name: "1", job: "io")
+        print("success")
+
+        let expectation = self.expectation(description: "Test API Success")
+
+        //When
+        apiClient.post(url: URL(string: "https:testurl.com")!, request: req, responseType: CreateJobRes.self) { result in
+
+            switch result {
+            case .success(let success):
+                //Then
+                print("Success data is \(success)")
+                XCTAssertEqual(success.name, "AbCD")
+                expectation.fulfill()
+            case .failure(let failure):
+                print("Failure \(failure)")
+                XCTAssertNil(failure)
+            }
         }
+
+        self.waitForExpectations(timeout: 5)
     }
 
 }

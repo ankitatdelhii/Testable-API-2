@@ -13,10 +13,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let req = CreateJobReQ(name: "morpheus", job: "leader")
-        let url = URL(string: "https://reqres.in/api/users")!
-        
-//        APIClient().post(url: url, request: req, responseType: CreateJobRes.self) { result in
+//        let req = CreateJobReQ(name: "morpheus", job: "leader")
+//        let url = URL(string: "https://reqres.in/api/users")!
+//        
+//        ApiClient2().postAPI(url: url, requestData: req, responseDataType: CreateJobRes.self) { result in
 //            switch result {
 //            case .success(let success):
 //                print("Got Data \(success)")
@@ -24,6 +24,7 @@ class ViewController: UIViewController {
 //                print("API Failed \(failure.localizedDescription)")
 //            }
 //        }
+        
         
     }
 

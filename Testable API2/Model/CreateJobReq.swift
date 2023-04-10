@@ -11,10 +11,3 @@ struct CreateJobReQ: Encodable {
     let name: String
     let job: String
 }
-
-struct CreateJobRes: Codable {
-    let name: String
-    let job: String
-    let id: String
-    let createdAt: String
-}
